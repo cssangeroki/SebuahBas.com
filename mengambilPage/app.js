@@ -1,13 +1,61 @@
 const injectIcon = (DictObj) => {
-  if DictObj("clue") == true{
+  if (DictObj["clue"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/clue.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["bascom"].acquired) {
     var newIcon = document.createElement("img");
     newIcon.src = "../img/bucket.png";
     newIcon.className = "icon";
     var iconList = document.getElementById("iconList");
-  
-    iconList.appendChild(newIcon);
-  }else if (DictObj("bascom2"))
 
+    iconList.appendChild(newIcon);
+  } else if (DictObj["bascom2"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/bucket.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["skripsi"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/scroll.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["diploma"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/scroll.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["sponge"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/cleaning.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["bisnis"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/office.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  } else if (DictObj["cash"].acquired) {
+    var newIcon = document.createElement("img");
+    newIcon.src = "../img/money.png";
+    newIcon.className = "icon";
+    var iconList = document.getElementById("iconList");
+
+    iconList.appendChild(newIcon);
+  }
 };
 
 const tokenFunc = async () => {
@@ -93,7 +141,7 @@ const setTrue = async () => {
   console.log(respJson);
 
   if (respJson.status === "SUCCESS") {
+    injectIcon(respJson.data);
     localStorage.setItem("sebuahbascomtoken", respJson.token);
   }
 };
-
