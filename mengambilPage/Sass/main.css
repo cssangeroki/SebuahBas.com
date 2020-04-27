@@ -20,6 +20,11 @@ body {
       grid-template-rows: 85% auto;
 }
 
+.bascom {
+  width: 500px;
+  height: auto;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +64,7 @@ body {
 
 .icon {
   width: 30px;
-  height: 30px;
+  height: auto;
 }
 
 .footer {
