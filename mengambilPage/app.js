@@ -112,26 +112,6 @@ const verification = async () => {
   }
 };
 
-const loadInven = async () => {
-  const response = await fetch("http://sebuahbas.com/api/inventory", {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      token: localStorage.getItem("sebuahbascomtoken"),
-      id: 0,
-    }),
-  });
-
-  const respJson = await response.json();
-  console.log(respJson);
-
-  if (respJson.status === "SUCCESS") {
-    localStorage.setItem("sebuahbascomtoken", respJson.token);
-  }
-};
-
 const setTrue = async () => {
   const response = await fetch("http://sebuahbas.com/api/inventory/bascom", {
     method: "POST", // *GET, POST, PUT, DELETE, etc.
