@@ -14,16 +14,29 @@
   <body onload="tempFunc(); setTrue()">
     <div class="container">
       <div class="main">
-        <h1 class="super-large">mengambil sebuah bascom</h1>
+        <h1 class="super-large">melempar sebuah bascom</h1>
+        <svg
+          class="bascomPath"
+          width="100vw"
+          height="20vh"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 374C195.76 184.088 450.5 0.999982 941 0.999985C1426.84 0.999987 1647.78 161.406 1903.62 347.144L1911 352.5"
+          />
+        </svg>
         <img class="bascom" src="../img/bascom.png" />
       </div>
 
       <div class="footer">
-        <h1>Link goes here</h1>
+        <h1 class="link">Link goes here</h1>
         <div class="icons" id="iconList"></div>
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="../app.js"></script>
+    <script src="../animation.js"></script>
   </body>
 </html>
