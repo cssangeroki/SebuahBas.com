@@ -5,16 +5,34 @@
   font-family: "titling-gothic-fb";
   font-style: normal;
   font-weight: 500;
+  overflow: hidden;
 }
 
 body {
   background-color: #59daae;
+  overflow: hidden;
 }
 
 .container {
   display: grid;
   height: 100vh;
   grid-template-rows: 85% auto;
+}
+
+.animation {
+  position: relative;
+  overflow: hidden;
+}
+.bascomPath {
+  width: 150vw;
+  overflow: hidden;
+}
+
+.bascom {
+  position: absolute;
+  width: 20vw;
+  top: 60px;
+  left: -100px;
 }
 
 .main {
@@ -30,6 +48,7 @@ body {
   color: white;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 }
 
 .icon {
@@ -43,6 +62,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
+  overflow: hidden;
   padding-left: 80px;
   padding-right: 80px;
 }

@@ -27,10 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     translateX: path("x"),
     translateY: path("y"),
     rotate: {
-      value: 1440,
-      loop: true,
+      value: 2440,
     },
+    duration: 5000,
     easing: "linear",
-    duration: 2000,
   });
 });
